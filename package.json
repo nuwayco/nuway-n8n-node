@@ -1,0 +1,30 @@
+{
+  "name": "n8n-nodes-nuway",
+  "version": "1.0.0",
+  "description": "NUWAY chatbot integration for n8n automation workflows",
+  "author": "Payman",
+  "license": "MIT",
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "nuway",
+    "chatbot"
+  ],
+  "n8n": {
+    "nodes": [
+      "dist/nuway.node.js"
+    ],
+    "credentials": [
+      "dist/nuway.credentials.js"
+    ]
+  },
+  "main": "dist/nuway.node.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
