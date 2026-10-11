@@ -1,30 +1,47 @@
 {
   "name": "n8n-nodes-nuway",
-  "version": "1.0.0",
-  "description": "NUWAY chatbot integration for n8n automation workflows",
-  "author": "Payman",
+  "version": "2.0.0",
+  "description": "n8n node for the NUWAY public API: chat with your AI workers, read conversations, leads and meetings, and manage training knowledge",
+  "author": "NUWAY",
   "license": "MIT",
+  "homepage": "https://github.com/nuway-co/n8n-nodes-nuway",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuway-co/n8n-nodes-nuway.git"
+  },
   "keywords": [
+    "n8n-community-node-package",
     "n8n",
-    "workflow",
-    "automation",
     "nuway",
-    "chatbot"
+    "chatbot",
+    "ai"
+  ],
+  "engines": {
+    "node": ">=18.10"
+  },
+  "files": [
+    "dist"
   ],
   "n8n": {
-    "nodes": [
-      "dist/nuway.node.js"
-    ],
+    "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/nuway.credentials.js"
+      "dist/credentials/NuwayApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Nuway/Nuway.node.js"
     ]
   },
-  "main": "dist/nuway.node.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node scripts/clean.js && tsc && node scripts/copy-icons.js",
+    "dev": "tsc --watch",
     "prepare": "npm run build"
   },
   "devDependencies": {
+    "@types/node": "^20.19.0",
+    "n8n-workflow": "1.120.10",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "form-data": "^4.0.6"
   }
 }
