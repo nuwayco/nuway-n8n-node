@@ -4,10 +4,10 @@
   "description": "n8n node for the NUWAY public API: chat with your AI workers, read conversations, leads and meetings, and manage training knowledge",
   "author": "NUWAY",
   "license": "MIT",
-  "homepage": "https://github.com/nuway-co/n8n-nodes-nuway",
+  "homepage": "https://github.com/nuwayco/nuway-n8n-node",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuway-co/n8n-nodes-nuway.git"
+    "url": "git+https://github.com/nuwayco/nuway-n8n-node.git"
   },
   "keywords": [
     "n8n-community-node-package",

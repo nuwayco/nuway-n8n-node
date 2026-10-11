@@ -12,7 +12,7 @@ export class NuwayApi implements ICredentialType {
 
 	icon = 'file:nuway.png' as const;
 
-	documentationUrl = 'https://github.com/nuway-co/n8n-nodes-nuway';
+	documentationUrl = 'https://github.com/nuwayco/nuway-n8n-node';
 
 	properties: INodeProperties[] = [
 		{
